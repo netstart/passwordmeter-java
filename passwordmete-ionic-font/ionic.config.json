@@ -1,0 +1,8 @@
+{
+  "name": "passwordmete-ionic-font",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
