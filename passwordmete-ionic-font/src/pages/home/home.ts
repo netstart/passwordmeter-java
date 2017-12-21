@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {PasswodScoreProvider} from '../../providers/passwod-score/passwod-score';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,17 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  score: any;
+  password: string;
 
+  constructor(public navCtrl: NavController,
+              private passwodScoreProvider: PasswodScoreProvider) {
   }
 
+  checkPassword(): void {
+    this.passwodScoreProvider.checkPassword(this.password).subscribe((response: any) => {
+      this.score = response;
+      console.log(this.score);
+    });
+  }
 }
