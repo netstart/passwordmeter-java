@@ -42,7 +42,6 @@ public class PasswodScoreResourceResourceIntTest {
 	private static final String PASSWORD_VERY_WEAK_COMPLEXITY = "Very Weak";
 	private static final String PASSWORD_VERY_WEAK_PERCENT = "2%";
 	
-	
 	private static final String PASSWORD_VERY_STRONG = "abSc5@akjaFHDF97&*^&6";
 	private static final String PASSWORD_VERY_STRONG_COMPLEXITY = "Very Strong";
 	private static final String PASSWORD_VERY_STRONG_PERCENT = "100%";

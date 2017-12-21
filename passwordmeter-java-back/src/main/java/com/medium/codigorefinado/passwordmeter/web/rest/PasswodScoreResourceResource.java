@@ -1,5 +1,7 @@
 package com.medium.codigorefinado.passwordmeter.web.rest;
 
+import java.io.FileNotFoundException;
+
 import javax.script.ScriptException;
 
 import org.slf4j.Logger;
@@ -28,10 +30,8 @@ public class PasswodScoreResourceResource {
 	}
 
 	@GetMapping("/check-password/{password}")
-	public PasswordScoreDTO checkPassword(@PathVariable String password) throws NoSuchMethodException, ScriptException {
-//		PasswordScoreDTO passwordScore = new PasswordScoreDTO("10 %", "Good");
-//		return passwordScore;
-
+	public PasswordScoreDTO checkPassword(@PathVariable String password)
+			throws NoSuchMethodException, ScriptException, FileNotFoundException {
 		return this.passwordMeterSevice.checkPassword(password);
 	}
 
